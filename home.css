@@ -1,0 +1,50 @@
+.image-wrapper {
+    position: relative; /* Position relative for the overlay */
+    width: 1300px; /* Fixed width for the image */
+    height: 400px; /* Fixed height for the image */
+    margin: 20px auto; /* Center the image */
+    overflow: hidden; /* Ensure the overlay does not overflow */
+}
+
+.image-wrapper img {
+    width: 100%; /* Make the image fill the wrapper width */
+    height: 100%; /* Make the image fill the wrapper height */
+    object-fit: cover; /* Crop the image to maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.overlay-text {
+    position: absolute; /* Overlay the text on the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    color: #175888; /* Set text color */
+    font-weight: bold; /* Make text bold */
+    font-size: 2em; /* Increase font size */
+    text-align: center; /* Center the text */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Optional: add text shadow for better readability */
+    background: rgba(255, 255, 255, 0.8); /* Optional: add a semi-transparent background */
+    padding: 10px; /* Add some padding around the text */
+    border-radius: 5px; /* Optional: round the background corners */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .image-wrapper {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Height adjusts automatically */
+        max-height: 400px; /* Maintain a max height if needed */
+    }
+
+    .overlay-text {
+        font-size: 1.5em; /* Smaller font size for medium screens */
+        padding: 8px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .overlay-text {
+        font-size: 1.2em; /* Smaller font size for mobile screens */
+        padding: 6px; /* Further adjust padding for smaller screens */
+    }
+}
